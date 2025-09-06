@@ -54,10 +54,10 @@ jobs:
         ./gradlew build -x test
     
     # Run specific unit tests
-   # - name: Run User Application tests
-     # run: |
-     #   cd backend
-     #   ./gradlew test --tests "com.spring.techpractica.Application.User.*"
+ # - name: Run User Application tests
+ #   run: |
+    #   cd backend
+     #  ./gradlew test --tests "com.spring.techpractica.Application.User.*"
     
     # Install frontend dependencies
     - name: Install frontend dependencies
@@ -75,7 +75,7 @@ jobs:
     - name: Run frontend tests
       run: |
         cd frontend
-        npm test -- --coverage --watchAll=false
+        yarn test --coverage --watchAll=false
       continue-on-error: true
     
     # Upload test results (optional)
