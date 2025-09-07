@@ -47,11 +47,12 @@ jobs:
         cd backend
         ./gradlew build -x test
     
-    # Run specific unit tests
- # - name: Run User Application tests
- #   run: |
-    #   cd backend
-     #  ./gradlew test --tests "com.spring.techpractica.Application.User.*"
+    - name: Run targeted JUnit tests
+      run: |
+        cd backend
+        ./gradlew test \
+          --tests "com.spring.techpractica.Application.User.LoginAccount.*" \
+          --tests "com.spring.techpractica.Application.User.RegisterAccount.*"
     
     # Install frontend dependencies
    
